@@ -1,0 +1,13 @@
+# .gitignore para Visual Studio Code
+
+# Arquivos de configurações do VS Code
+.vscode/
+
+# Logs
+*.log
+
+# macOS - arquivos de cache
+.DS_Store
+
+# Outros
+*.sublime-workspace
