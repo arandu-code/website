@@ -1,0 +1,361 @@
+/* Variáveis de Cor para harmonizar com o Logo */
+:root {
+    --cor-primaria: #CC6600; /* Laranja/Dourado escuro */
+    --cor-secundaria: #343a40; /* Cinza escuro - Agora usado como cor de destaque */
+    --cor-cta: #28a745; /* Verde de Sucesso/CTA */
+    --cor-cta-hover: #218838;
+    --fundo-escuro: #000000; /* Novo: Fundo Preto */
+    --fundo-claro: #1a1a1a; /* Novo: Fundo Cinza Escuro para seções secundárias */
+    --cor-texto-claro: #f4f7f6; /* Novo: Texto principal em fundo escuro */
+    --cor-texto-suave: #aaaaaa; /* Novo: Texto secundário em fundo escuro */
+}
+
+/* **NOVO: Box-sizing para facilitar layouts de coluna** */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* CSS Básico e Apresentável */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fundo-escuro); /* Fundo do BODY PRETO */
+    color: var(--cor-texto-claro); /* Cor do texto padrão BRANCO/CLARO */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+/* NOVO: TOP BAR com Logo e Título no Canto Esquerdo */
+.navbar-top {
+    background-color: var(--fundo-escuro); /* Fundo da barra PRETO */
+    padding: 0; 
+    border-bottom: 1px solid var(--cor-secundaria);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    /* AJUSTE PARA CENTRALIZAR O LOGO E O TÍTULO */
+    justify-content: center; 
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Ajustes de tamanho e fundo do logo */
+.navbar-logo {
+    background-color: var(--fundo-escuro); /* Mantém o fundo preto no bloco do logo */
+    /* AJUSTADO: Reduzindo o padding vertical (topo/base) para 8px para comprimir a barra de navegação */
+    padding: 8px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo img {
+    /* MANTIDO: Tamanho de 270px, conforme solicitado */
+    max-height: 270px; 
+    width: auto;
+}
+/* Fim dos ajustes no logo */
+
+.navbar-title {
+    color: white; /* Título BRANCO para contraste */
+    font-size: 1.7em; /* Fonte um pouco maior */
+    font-weight: bold;
+    margin: 0;
+    /* AJUSTE: Reduz o padding-left para a centralização ficar mais limpa */
+    padding-left: 10px; 
+}
+
+/* CABEÇALHO Principal (Hero Section) */
+header {
+    background-color: var(--fundo-escuro); 
+    color: var(--cor-texto-claro); 
+    /* MANTIDO: Espaçamento reduzido para 10px em cima e 15px embaixo para mais compacidade */
+    padding: 10px 0 15px 0; 
+    text-align: center;
+}
+
+header h2 { /* Usado h2 no HTML para as frases de efeito */
+    margin: 10px 0;
+    font-size: 2.5em; 
+    color: white;
+    text-transform: uppercase;
+}
+
+header h2:first-of-type {
+    margin-top: 0;
+    font-size: 3em;
+    color: var(--cor-primaria); /* Destaque na cor primária */
+}
+
+/* CTA PRINCIPAL */
+.cta-header {
+    /* MANTIDO: Reduzindo o margin-top de 30px para 20px */
+    margin-top: 20px; 
+}
+
+.cta-header a {
+    background-color: var(--cor-cta); 
+    color: var(--fundo-escuro); /* Texto CTA preto para contraste MÁXIMO */
+    padding: 18px 40px; 
+    border-radius: 8px;
+    font-size: 1.6em;
+    font-weight: 800; 
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    border: 2px solid white;
+}
+
+.cta-header a:hover {
+    background-color: var(--cor-cta-hover);
+    transform: scale(1.05); 
+}
+
+/* SEÇÃO DE BENEFÍCIOS/PROVA SOCIAL */
+.benefits {
+    background-color: var(--fundo-claro); /* Cinza escuro para diferenciar do header */
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+}
+
+.benefits h2 {
+    color: var(--cor-primaria); /* Título em Laranja */
+}
+
+.benefits-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.benefit-item {
+    width: 28%;
+    padding: 15px;
+    font-weight: bold;
+    color: var(--cor-texto-claro);
+    font-size: 1.1em;
+}
+
+.benefit-item span {
+    display: block;
+    font-size: 3em;
+    color: var(--cor-primaria);
+    margin-bottom: 5px;
+}
+
+
+/* SEÇÃO DE SERVIÇOS */
+.services {
+    background-color: var(--fundo-escuro); /* Fundo Preto */
+    padding: 60px 0; 
+    text-align: center;
+    color: var(--cor-texto-claro);
+}
+
+.services h2 {
+    font-size: 2.4em;
+    color: white; /* Título BRANCO */
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    justify-content: center;
+}
+
+.service-item {
+    background-color: var(--fundo-claro); /* Fundo do item cinza escuro para contraste */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    /* AJUSTADO: Usamos 50% e deixamos o gap de 30px empurrar. Como temos 'box-sizing: border-box;', o 50% funciona melhor em flex com gap. */
+    width: calc(50% - 15px); 
+    text-align: left;
+    transition: transform 0.4s, border-bottom 0.4s;
+    border-bottom: 5px solid var(--fundo-claro); 
+}
+
+.service-item:hover {
+    transform: translateY(-8px); 
+    border-bottom: 5px solid var(--cor-primaria); 
+}
+
+.service-item span.icon {
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    color: white; /* Título de Serviço BRANCO */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    color: var(--cor-texto-suave); /* Texto do serviço cinza claro */
+    font-size: 1em;
+}
+
+/* NOVO: SEÇÃO DE CLIENTES/CASE DE SUCESSO */
+.clients-section {
+    background-color: var(--fundo-claro); /* Fundo cinza escuro para a seção de clientes */
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid var(--cor-secundaria);
+}
+
+.clients-section h2 {
+    color: var(--cor-primaria);
+    font-size: 2.4em;
+    margin-bottom: 40px;
+}
+
+.case-study {
+    background-color: var(--fundo-escuro); /* Fundo preto para o bloco do case de sucesso */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.case-study-logo img {
+    max-height: 80px; /* Tamanho do logo do cliente */
+    margin-bottom: 20px;
+}
+
+.case-study h3 {
+    font-size: 1.8em;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.case-study p {
+    color: var(--cor-texto-suave);
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* SEÇÃO DE FORMULÁRIO/CONTATO */
+.form-section {
+    padding: 60px 0;
+    background-color: var(--cor-primaria); /* Mantém Laranja para o FORM/CTA final */
+    color: var(--fundo-escuro); /* Texto PRETO para contraste no laranja */
+    text-align: center;
+}
+
+.form-section h3 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: var(--fundo-escuro);
+}
+
+.mock-form input, .mock-form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.mock-form input {
+    background-color: white;
+    color: #333;
+}
+
+.mock-form button {
+    background-color: var(--cor-cta);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mock-form button:hover {
+    background-color: var(--cor-cta-hover);
+}
+
+.form-content {
+    max-width: 500px; 
+    margin: 0 auto;
+}
+
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: var(--cor-texto-suave); /* Texto do rodapé cinza claro */
+    background-color: var(--fundo-escuro); /* Fundo PRETO */
+    border-top: 1px solid var(--cor-secundaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-logo {
+        padding: 10px 15px; 
+    }
+    .navbar-logo img {
+        /* Ajuste de responsividade para o logo */
+        max-height: 100px; 
+    }
+    
+    .navbar-title {
+        font-size: 1.4em;
+    }
+    
+    header h2 {
+        font-size: 2em;
+    }
+    header h2:first-of-type {
+        font-size: 2.5em;
+    }
+    
+    .cta-header {
+        margin-top: 20px;
+    }
+
+    .cta-header a {
+        font-size: 1.2em;
+        padding: 15px 25px;
+    }
+    
+    /* AJUSTE DO GAP NO MOBILE */
+    .service-list {
+        /* Reduzindo o gap horizontal para ter mais espaço, mas mantendo o vertical (que é o margin-bottom) */
+        gap: 15px;
+    }
+
+    /* **CORREÇÃO FINAL PARA 2 COLUNAS NO MOBILE** */
+    .service-item {
+        /* Usamos 50% e subtraímos metade do novo gap (15px/2 = 7.5px) para caberem 2 por linha com espaçamento de 15px. */
+        width: calc(50% - 7.5px); 
+        /* Adicionamos o espaçamento vertical entre as linhas */
+        margin-bottom: 15px; 
+    }
+    
+    .benefit-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
