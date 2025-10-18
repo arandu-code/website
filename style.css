@@ -108,7 +108,7 @@ header h2:first-of-type {
     color: var(--fundo-escuro); /* Texto CTA preto para contraste MÁXIMO */
     padding: 18px 40px; 
     border-radius: 8px;
-    font-size: 1.6em;
+    font-size: 1.2em;
     font-weight: 800; 
     transition: background-color 0.3s, transform 0.3s;
     display: inline-block;
